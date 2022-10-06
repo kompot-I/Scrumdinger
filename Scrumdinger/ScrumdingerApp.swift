@@ -1,9 +1,3 @@
-//
-//  ScrumdingerApp.swift
-//  Scrumdinger
-//
-//  Created by Nikita  Zubov on 05.10.2022.
-//
 
 import SwiftUI
 
@@ -11,7 +5,9 @@ import SwiftUI
 struct ScrumdingerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ScrumsView(scrums: DailyScrum.sampleData)
+            }
         }
     }
 }
