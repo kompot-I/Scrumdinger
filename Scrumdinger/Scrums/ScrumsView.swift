@@ -17,7 +17,7 @@ struct ScrumsView: View {
                 .listRowBackground(scrum.theme.mainColor)
             }
         }
-        .navigationTitle("Daily Scrums")
+        .navigationTitle("Встречи")
         .toolbar {
             Button(action: {
                 isPresentingNewScrumView = true
@@ -31,13 +31,13 @@ struct ScrumsView: View {
                 DetailEditView(data: $newScrumData)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction){
-                            Button("Dismiss") {
+                            Button("Отмена") {
                                 isPresentingNewScrumView = false
                                 newScrumData = DailyScrum.Data()
                             }
                         }
                         ToolbarItem(placement: .confirmationAction){
-                            Button("Add"){
+                            Button("Готово"){
                                 let newScrum = DailyScrum(data: newScrumData)
                                 scrums.append(newScrum)
                                 isPresentingNewScrumView = false

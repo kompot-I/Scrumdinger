@@ -14,7 +14,7 @@ struct ErrorView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("An error has occurred!")
+                Text("Произошла ошибка!")
                     .font(.title)
                     .padding(.bottom)
                 Text(errorWrapper.error.localizedDescription)
@@ -30,7 +30,7 @@ struct ErrorView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Dismiss") {
+                    Button("Игнор") {
                         dismiss()
                     }
                 }
@@ -46,7 +46,7 @@ struct ErrorView_Previews: PreviewProvider {
     
     static var wrapper: ErrorWrapper {
         ErrorWrapper(error: SampleError.errorRequired,
-                     guidance: "You can safely ignore this error.")
+                     guidance: "Вы можете спокойно игнорировать эту ошибку.")
     }
     
     static var previews: some View {

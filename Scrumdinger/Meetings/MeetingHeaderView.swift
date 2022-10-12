@@ -31,13 +31,13 @@ struct MeetingHeaderView: View {
                 .progressViewStyle(ScrumProgressViewStyle(theme: theme))
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Seconds Elapsed")
+                    Text("Секунд прошло")
                         .font(.caption)
                     Label("\(secondsElapsed)", systemImage: "hourglass.bottomhalf.fill")
                 }
                 Spacer()
                 VStack(alignment: .trailing) {
-                    Text("Seconds Remaining")
+                    Text("Секунд осталось")
                         .font(.caption)
                     Label("\(secondsRemaining)", systemImage: "hourglass.tophalf.fill")
                         .labelStyle(.trailingIcon)

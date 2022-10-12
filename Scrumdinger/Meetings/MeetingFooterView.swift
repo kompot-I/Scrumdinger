@@ -19,22 +19,22 @@ struct MeetingFooterView: View {
         return speakers.dropLast().allSatisfy { $0.isCompleted }
     }
     private var speakerText: String {
-        guard let speakerNumber = speakerNumber else { return "No more speakers" }
-        return "Speaker \(speakerNumber) of \(speakers.count)"
+        guard let speakerNumber = speakerNumber else { return "Спикеров больше нет" }
+        return "Спикер \(speakerNumber) из \(speakers.count)"
     }
     
     var body: some View {
         VStack {
             HStack {
                 if isLastSpeaker {
-                    Text("Last Speaker")
+                    Text("Последний Спикер")
                 } else {
                     Text(speakerText)
                     Spacer()
                     Button(action: skipAction) {
                         Image(systemName: "forward.fill")
                     }
-                    .accessibilityLabel("Next speaker")
+                    .accessibilityLabel("След. спикер")
                 }
             }
         }

@@ -76,6 +76,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		634D7A2928F6B93C00A08CD5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				6354C05428F46AFD0063E71D /* HistoryView.swift */,
+				634ED6D328EF09D7009C1F1D /* DetailEditView.swift */,
+				63EBFA9628EDFEF8002BC2FC /* DetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		634D7A2A28F6BF8600A08CD5 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				634ED6D728EF3423009C1F1D /* ThemePicker.swift */,
+				634ED6D528EF31C0009C1F1D /* ThemeView.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		634D7A2B28F6BFB900A08CD5 /* Meetings */ = {
+			isa = PBXGroup;
+			children = (
+				634ED6D928EF7AB2009C1F1D /* MeetingHeaderView.swift */,
+				63A4166028F0C32F002449FE /* SpeakerArc.swift */,
+				634ED6DB28EF81EA009C1F1D /* ScrumProgressViewStyle.swift */,
+				7CB413E026EA824100544BA7 /* MeetingView.swift */,
+				63A4165E28F0C03B002449FE /* MeetingTimerView.swift */,
+				634ED6DF28EF8585009C1F1D /* MeetingFooterView.swift */,
+			);
+			path = Meetings;
+			sourceTree = "<group>";
+		};
+		634D7A2C28F6C0C600A08CD5 /* Scrums */ = {
+			isa = PBXGroup;
+			children = (
+				7CB413F426EAC55200544BA7 /* CardView.swift */,
+				7CB413F826EB9A1A00544BA7 /* ScrumsView.swift */,
+			);
+			path = Scrums;
+			sourceTree = "<group>";
+		};
 		7CB413D226EA824100544BA7 = {
 			isa = PBXGroup;
 			children = (
@@ -95,25 +136,16 @@
 		7CB413DD26EA824100544BA7 /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
-				634ED6D928EF7AB2009C1F1D /* MeetingHeaderView.swift */,
-				7CB413EF26EA97B300544BA7 /* Models */,
 				7CB413DE26EA824100544BA7 /* ScrumdingerApp.swift */,
-				7CB413F426EAC55200544BA7 /* CardView.swift */,
-				7CB413E026EA824100544BA7 /* MeetingView.swift */,
-				7CB413F826EB9A1A00544BA7 /* ScrumsView.swift */,
+				634D7A2B28F6BFB900A08CD5 /* Meetings */,
+				634D7A2928F6B93C00A08CD5 /* Detail */,
+				7CB413EF26EA97B300544BA7 /* Models */,
+				634D7A2C28F6C0C600A08CD5 /* Scrums */,
+				634D7A2A28F6BF8600A08CD5 /* Theme */,
 				7CB413F626EAC76E00544BA7 /* TrailingIconLabelStyle.swift */,
+				6341951428F04955003B3C84 /* ErrorView.swift */,
 				7CB413E226EA824300544BA7 /* Assets.xcassets */,
 				7CB413E426EA824300544BA7 /* Preview Content */,
-				63EBFA9628EDFEF8002BC2FC /* DetailView.swift */,
-				634ED6D328EF09D7009C1F1D /* DetailEditView.swift */,
-				634ED6D528EF31C0009C1F1D /* ThemeView.swift */,
-				634ED6D728EF3423009C1F1D /* ThemePicker.swift */,
-				634ED6DB28EF81EA009C1F1D /* ScrumProgressViewStyle.swift */,
-				634ED6DF28EF8585009C1F1D /* MeetingFooterView.swift */,
-				6341951428F04955003B3C84 /* ErrorView.swift */,
-				63A4165E28F0C03B002449FE /* MeetingTimerView.swift */,
-				63A4166028F0C32F002449FE /* SpeakerArc.swift */,
-				6354C05428F46AFD0063E71D /* HistoryView.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";

@@ -15,11 +15,11 @@ struct HistoryView: View {
             VStack(alignment: .leading) {
                 Divider()
                     .padding(.bottom)
-                Text("Attendees")
+                Text("Участники")
                     .font(.headline)
                 Text(history.attendeeString)
                 if let transcript = history.transcript {
-                    Text("Transcript")
+                    Text("Расшифровка")
                         .font(.headline)
                         .padding(.top)
                     Text(transcript)

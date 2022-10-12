@@ -13,20 +13,20 @@ struct DetailEditView: View {
     
     var body: some View {
         Form {
-            Section(header: Text("Meeting Info")) {
-                TextField("title", text: $data.title)
+            Section(header: Text("Информация о встрече")) {
+                TextField("Заголовок", text: $data.title)
                 HStack {
                     Slider(value: $data.lengthInMinutes, in: 5...30, step: 1) {
                         Text("Length")
                     }
                     .accessibilityValue("\(Int(data.lengthInMinutes)) minutes")
                     Spacer()
-                    Text("\(Int(data.lengthInMinutes)) min")
+                    Text("\(Int(data.lengthInMinutes)) мин")
                         .accessibilityHidden(true)
                 }
                 ThemePicker(selection: $data.theme)
             }
-            Section(header: Text("Attendees")) {
+            Section(header: Text("Участники")) {
                 ForEach(data.attendees) { attendee in
                     Text(attendee.name)
                 }
@@ -34,7 +34,7 @@ struct DetailEditView: View {
                     data.attendees.remove(atOffsets: indices)
                 }
                 HStack {
-                    TextField("new attendee", text: $newAttendeeName)
+                    TextField("новый участник", text: $newAttendeeName)
                     Button(action: {
                         withAnimation {
                             let attendee = DailyScrum.Attendee(name: newAttendeeName)

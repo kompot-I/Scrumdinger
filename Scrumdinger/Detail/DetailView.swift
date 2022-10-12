@@ -15,21 +15,21 @@ struct DetailView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Meeting Info")) {
+            Section(header: Text("Информация о встрече")) {
                 NavigationLink(destination: MeetingView(scrum: $scrum)) {
-                    Label("Start Meeting", systemImage: "timer")
+                    Label("Начать встречу", systemImage: "timer")
                         .font(.headline)
                     .foregroundColor(.accentColor)
                 }
                 HStack {
-                    Label("Length", systemImage: "clock")
+                    Label("Время", systemImage: "clock")
                     Spacer()
-                    Text("\(scrum.lengthInMinutes) minutes")
+                    Text("\(scrum.lengthInMinutes) мин")
                 }
                 .accessibilityElement(children: .combine)
                 
                 HStack {
-                    Label("Theme", systemImage: "paintpalette")
+                    Label("Тема", systemImage: "paintpalette")
                     Spacer()
                     Text(scrum.theme.name)
                         .padding(4)
@@ -39,14 +39,14 @@ struct DetailView: View {
                 }
                 .accessibilityElement(children: .combine)
             }
-            Section(header: Text("Attendees")) {
+            Section(header: Text("Участники")) {
                 ForEach(scrum.attendees) { attendee in
                     Label(attendee.name, systemImage: "person")
                 }
             }
-            Section(header: Text("History")) {
+            Section(header: Text("История")) {
                 if scrum.history.isEmpty {
-                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
+                    Label("Встреч пока нет", systemImage: "calendar.badge.exclamationmark")
                 }
                 ForEach(scrum.history) { history in
                     NavigationLink(destination: HistoryView(history: history)) {
@@ -60,7 +60,7 @@ struct DetailView: View {
         }
         .navigationTitle(scrum.title)
         .toolbar {
-            Button("Edit") {
+            Button("Изм.") {
                 isPresentingEditView = true
                 data = scrum.data
             }
@@ -71,12 +71,12 @@ struct DetailView: View {
                     .navigationTitle(scrum.title)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
-                            Button("Cancel") {
+                            Button("Отмена") {
                                 isPresentingEditView = false
                             }
                         }
                         ToolbarItem(placement: .confirmationAction) {
-                            Button("Done") {
+                            Button("Готово") {
                                 isPresentingEditView = false
                                 scrum.update(from: data)
                             }
